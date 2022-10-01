@@ -18,12 +18,14 @@ import java.awt.event.ActionEvent;
 
 public class Tic_Tac_Toe_Game {
 
-	private JFrame frame;
+	private JFrame frmTicTacToe;
 	private JTextField xPlayerScore;
 	private JTextField oPlayerScore;
 	private int xScore = 0;
 	private int oScore = 0;
 	private String gameStarter = "X";
+	private Color player_X_Color = new Color(41, 145, 132);
+	private Color player_O_Color = new Color(87, 65, 157);
 	private int b1 = 15;
 	private int b2 = 15;
 	private int b3 = 15;
@@ -43,7 +45,7 @@ public class Tic_Tac_Toe_Game {
 			public void run() {
 				try {
 					Tic_Tac_Toe_Game window = new Tic_Tac_Toe_Game();
-					window.frame.setVisible(true);
+					window.frmTicTacToe.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -69,49 +71,49 @@ public class Tic_Tac_Toe_Game {
 	private void winningGame() {
 		// Conditions for player X winning the game
 		if (b1 == 1 && b2 == 1 && b3 == 1) {
-			JOptionPane.showMessageDialog(frame, "Player X Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(frmTicTacToe, "Player X Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
 			xScore++;
 			xPlayerScore.setText(String.valueOf(xScore));
 		}
 		
 		else if (b4 == 1 && b5 == 1 && b6 == 1) {
-			JOptionPane.showMessageDialog(frame, "Player X Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(frmTicTacToe, "Player X Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
 			xScore++;
 			xPlayerScore.setText(String.valueOf(xScore));
 		}
 		
 		else if (b7 == 1 && b8 == 1 && b9 == 1) {
-			JOptionPane.showMessageDialog(frame, "Player X Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(frmTicTacToe, "Player X Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
 			xScore++;
 			xPlayerScore.setText(String.valueOf(xScore));
 		}
 		
 		else if (b1 == 1 && b4 == 1 && b7 == 1) {
-			JOptionPane.showMessageDialog(frame, "Player X Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(frmTicTacToe, "Player X Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
 			xScore++;
 			xPlayerScore.setText(String.valueOf(xScore));
 		}
 		
 		else if (b2 == 1 && b5 == 1 && b8 == 1) {
-			JOptionPane.showMessageDialog(frame, "Player X Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(frmTicTacToe, "Player X Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
 			xScore++;
 			xPlayerScore.setText(String.valueOf(xScore));
 		}
 		
 		else if (b3 == 1 && b6 == 1 && b9 == 1) {
-			JOptionPane.showMessageDialog(frame, "Player X Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(frmTicTacToe, "Player X Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
 			xScore++;
 			xPlayerScore.setText(String.valueOf(xScore));
 		}
 		
 		else if (b7 == 1 && b5 == 1 && b3 == 1) {
-			JOptionPane.showMessageDialog(frame, "Player X Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(frmTicTacToe, "Player X Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
 			xScore++;
 			xPlayerScore.setText(String.valueOf(xScore));
 		}
 		
 		else if (b1 == 1 && b5 == 1 && b9 == 1) {
-			JOptionPane.showMessageDialog(frame, "Player X Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(frmTicTacToe, "Player X Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
 			xScore++;
 			xPlayerScore.setText(String.valueOf(xScore));
 		}
@@ -119,55 +121,56 @@ public class Tic_Tac_Toe_Game {
 		
 		// Conditions for player O winning the game
 		else if (b1 == 0 && b2 == 0 && b3 == 0) {
-			JOptionPane.showMessageDialog(frame, "Player O Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(frmTicTacToe, "Player O Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
 			oScore++;
 			oPlayerScore.setText(String.valueOf(oScore));
 		}
 		
 		else if (b4 == 0 && b5 == 0 && b6 == 0) {
-			JOptionPane.showMessageDialog(frame, "Player O Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(frmTicTacToe, "Player O Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
 			oScore++;
 			oPlayerScore.setText(String.valueOf(oScore));
 		}
 		
 		else if (b7 == 0 && b8 == 0 && b9 == 0) {
-			JOptionPane.showMessageDialog(frame, "Player O Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(frmTicTacToe, "Player O Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
 			oScore++;
 			oPlayerScore.setText(String.valueOf(oScore));
 		}
 		
 		else if (b1 == 0 && b4 == 0 && b7 == 0) {
-			JOptionPane.showMessageDialog(frame, "Player O Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(frmTicTacToe, "Player O Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
 			oScore++;
 			oPlayerScore.setText(String.valueOf(oScore));
 		}
 		
 		else if (b2 == 0 && b5 == 0 && b8 == 0) {
-			JOptionPane.showMessageDialog(frame, "Player O Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(frmTicTacToe, "Player O Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
 			oScore++;
 			oPlayerScore.setText(String.valueOf(oScore));
 		}
 		
 		else if (b3 == 0 && b6 == 0 && b9 == 0) {
-			JOptionPane.showMessageDialog(frame, "Player O Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(frmTicTacToe, "Player O Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
 			oScore++;
 			oPlayerScore.setText(String.valueOf(oScore));
 		}
 		
 		else if (b7 == 0 && b5 == 0 && b3 == 0) {
-			JOptionPane.showMessageDialog(frame, "Player O Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(frmTicTacToe, "Player O Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
 			oScore++;
 			oPlayerScore.setText(String.valueOf(oScore));
 		}
 		
 		else if (b1 == 0 && b5 == 0 && b9 == 0) {
-			JOptionPane.showMessageDialog(frame, "Player O Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(frmTicTacToe, "Player O Wins", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
 			oScore++;
 			oPlayerScore.setText(String.valueOf(oScore));
 		}
 		
+		// condition for tie or no winner of the game
 		else if (i == 9) {
-			JOptionPane.showMessageDialog(frame, "It's a Tie, there is no winner!", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(frmTicTacToe, "It's a Tie, there is no winner!", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
 		}
 	}
 
@@ -175,15 +178,19 @@ public class Tic_Tac_Toe_Game {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 500, 350);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(new BorderLayout(0, 0));
+		frmTicTacToe = new JFrame();
+		frmTicTacToe.setFont(new Font("Dialog", Font.BOLD, 20));
+		frmTicTacToe.setBackground(new Color(138, 169, 153));
+		frmTicTacToe.setTitle("Tic Tac Toe Game");
+		frmTicTacToe.setBounds(100, 100, 500, 350);
+		frmTicTacToe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmTicTacToe.getContentPane().setLayout(new BorderLayout(0, 0));
 		
 		JPanel panel = new JPanel();
-		panel.setBorder(new LineBorder(new Color(0, 0, 0)));
-		frame.getContentPane().add(panel, BorderLayout.CENTER);
-		panel.setLayout(new GridLayout(3, 5, 2, 2));
+		panel.setForeground(new Color(70, 164, 136));
+		panel.setBorder(new LineBorder(new Color(96, 180, 148)));
+		frmTicTacToe.getContentPane().add(panel, BorderLayout.CENTER);
+		panel.setLayout(new GridLayout(0, 5, 0, 0));
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBorder(new LineBorder(new Color(0, 0, 0)));
@@ -191,15 +198,17 @@ public class Tic_Tac_Toe_Game {
 		panel_1.setLayout(new BorderLayout(0, 0));
 		
 		JButton btn1 = new JButton("");
+		btn1.setForeground(new Color(147, 105, 190));
+		btn1.setBackground(new Color(145, 79, 197));
 		btn1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btn1.setText(gameStarter);
 				if (gameStarter.equalsIgnoreCase("X")) {
-					btn1.setForeground(Color.RED);
+					btn1.setForeground(player_X_Color);
 					b1 = 1;
 					i++;
 				} else {
-					btn1.setForeground(Color.BLUE);
+					btn1.setForeground(player_O_Color);
 					b1 = 0;
 					i++;
 				}
@@ -216,15 +225,17 @@ public class Tic_Tac_Toe_Game {
 		panel_2.setLayout(new BorderLayout(0, 0));
 		
 		JButton btn2 = new JButton("");
+		btn2.setForeground(new Color(147, 105, 190));
+		btn2.setBackground(new Color(145, 79, 197));
 		btn2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btn2.setText(gameStarter);
 				if (gameStarter.equalsIgnoreCase("X")) {
-					btn2.setForeground(Color.RED);
+					btn2.setForeground(player_X_Color);
 					b2 = 1;
 					i++;
 				} else {
-					btn2.setForeground(Color.BLUE);
+					btn2.setForeground(player_O_Color);
 					b2 = 0;
 					i++;
 				}
@@ -241,15 +252,17 @@ public class Tic_Tac_Toe_Game {
 		panel_3.setLayout(new BorderLayout(0, 0));
 		
 		JButton btn3 = new JButton("");
+		btn3.setForeground(new Color(147, 105, 190));
+		btn3.setBackground(new Color(145, 79, 197));
 		btn3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btn3.setText(gameStarter);
 				if (gameStarter.equalsIgnoreCase("X")) {
-					btn3.setForeground(Color.RED);
+					btn3.setForeground(player_X_Color);
 					b3 = 1;
 					i++;
 				} else {
-					btn3.setForeground(Color.BLUE);
+					btn3.setForeground(player_O_Color);
 					b3 = 0;
 					i++;
 				}
@@ -266,6 +279,7 @@ public class Tic_Tac_Toe_Game {
 		panel_4.setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblNewLabel = new JLabel("Player X");
+		lblNewLabel.setForeground(new Color(41, 145, 132));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD, 15));
 		panel_4.add(lblNewLabel, BorderLayout.CENTER);
@@ -276,6 +290,7 @@ public class Tic_Tac_Toe_Game {
 		panel_5.setLayout(new BorderLayout(0, 0));
 		
 		xPlayerScore = new JTextField();
+		xPlayerScore.setForeground(new Color(72, 142, 130));
 		xPlayerScore.setFont(new Font("Lucida Grande", Font.BOLD, 20));
 		xPlayerScore.setHorizontalAlignment(SwingConstants.CENTER);
 		xPlayerScore.setText("0");
@@ -288,15 +303,17 @@ public class Tic_Tac_Toe_Game {
 		panel_6.setLayout(new BorderLayout(0, 0));
 		
 		JButton btn4 = new JButton("");
+		btn4.setForeground(new Color(147, 105, 190));
+		btn4.setBackground(new Color(145, 79, 197));
 		btn4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btn4.setText(gameStarter);
 				if (gameStarter.equalsIgnoreCase("X")) {
-					btn4.setForeground(Color.RED);
+					btn4.setForeground(player_X_Color);
 					b4 = 1;
 					i++;
 				} else {
-					btn4.setForeground(Color.BLUE);
+					btn4.setForeground(player_O_Color);
 					b4 = 0;
 					i++;
 				}
@@ -313,15 +330,17 @@ public class Tic_Tac_Toe_Game {
 		panel_7.setLayout(new BorderLayout(0, 0));
 		
 		JButton btn5 = new JButton("");
+		btn5.setForeground(new Color(147, 105, 190));
+		btn5.setBackground(new Color(145, 79, 197));
 		btn5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btn5.setText(gameStarter);
 				if (gameStarter.equalsIgnoreCase("X")) {
-					btn5.setForeground(Color.RED);
+					btn5.setForeground(player_X_Color);
 					b5 = 1;
 					i++;
 				} else {
-					btn5.setForeground(Color.BLUE);
+					btn5.setForeground(player_O_Color);
 					b5 = 0;
 					i++;
 				}
@@ -338,15 +357,17 @@ public class Tic_Tac_Toe_Game {
 		panel_8.setLayout(new BorderLayout(0, 0));
 		
 		JButton btn6 = new JButton("");
+		btn6.setForeground(new Color(147, 105, 190));
+		btn6.setBackground(new Color(145, 79, 197));
 		btn6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btn6.setText(gameStarter);
 				if (gameStarter.equalsIgnoreCase("X")) {
-					btn6.setForeground(Color.RED);
+					btn6.setForeground(player_X_Color);
 					b6 = 1;
 					i++;
 				} else {
-					btn6.setForeground(Color.BLUE);
+					btn6.setForeground(player_O_Color);
 					b6 = 0;
 					i++;
 				}
@@ -363,6 +384,7 @@ public class Tic_Tac_Toe_Game {
 		panel_9.setLayout(new BorderLayout(0, 0));
 		
 		JLabel lblNewLabel_1 = new JLabel("Player O");
+		lblNewLabel_1.setForeground(new Color(87, 65, 157));
 		lblNewLabel_1.setFont(new Font("Lucida Grande", Font.BOLD, 15));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
 		panel_9.add(lblNewLabel_1, BorderLayout.CENTER);
@@ -373,6 +395,7 @@ public class Tic_Tac_Toe_Game {
 		panel_10.setLayout(new BorderLayout(0, 0));
 		
 		oPlayerScore = new JTextField();
+		oPlayerScore.setForeground(new Color(78, 65, 151));
 		oPlayerScore.setHorizontalAlignment(SwingConstants.CENTER);
 		oPlayerScore.setFont(new Font("Lucida Grande", Font.BOLD, 20));
 		oPlayerScore.setText("0");
@@ -385,15 +408,17 @@ public class Tic_Tac_Toe_Game {
 		panel_11.setLayout(new BorderLayout(0, 0));
 		
 		JButton btn7 = new JButton("");
+		btn7.setForeground(new Color(147, 105, 190));
+		btn7.setBackground(new Color(145, 79, 197));
 		btn7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btn7.setText(gameStarter);
 				if (gameStarter.equalsIgnoreCase("X")) {
-					btn7.setForeground(Color.RED);
+					btn7.setForeground(player_X_Color);
 					b7 = 1;
 					i++;
 				} else {
-					btn7.setForeground(Color.BLUE);
+					btn7.setForeground(player_O_Color);
 					b7 = 0;
 					i++;
 				}
@@ -410,15 +435,17 @@ public class Tic_Tac_Toe_Game {
 		panel_12.setLayout(new BorderLayout(0, 0));
 		
 		JButton btn8 = new JButton("");
+		btn8.setForeground(new Color(147, 105, 190));
+		btn8.setBackground(new Color(145, 79, 197));
 		btn8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btn8.setText(gameStarter);
 				if (gameStarter.equalsIgnoreCase("X")) {
-					btn8.setForeground(Color.RED);
+					btn8.setForeground(player_X_Color);
 					b8 = 1;
 					i++;
 				} else {
-					btn8.setForeground(Color.BLUE);
+					btn8.setForeground(player_O_Color);
 					b8 = 0;
 					i++;
 				}
@@ -435,15 +462,17 @@ public class Tic_Tac_Toe_Game {
 		panel_13.setLayout(new BorderLayout(0, 0));
 		
 		JButton btn9 = new JButton("");
+		btn9.setForeground(new Color(147, 105, 190));
+		btn9.setBackground(new Color(145, 79, 197));
 		btn9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btn9.setText(gameStarter);
 				if (gameStarter.equalsIgnoreCase("X")) {
-					btn9.setForeground(Color.RED);
+					btn9.setForeground(player_X_Color);
 					b9 = 1;
 					i++;
 				} else {
-					btn9.setForeground(Color.BLUE);
+					btn9.setForeground(player_O_Color);
 					b9 = 0;
 					i++;
 				}
@@ -459,7 +488,10 @@ public class Tic_Tac_Toe_Game {
 		panel.add(panel_14);
 		panel_14.setLayout(new BorderLayout(0, 0));
 		
+		
+		// Reset function reset the text field of the game and the scores too
 		JButton btnReset = new JButton("RESET");
+		btnReset.setForeground(new Color(32, 31, 234));
 		btnReset.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btn1.setText(null);
@@ -492,11 +524,12 @@ public class Tic_Tac_Toe_Game {
 		panel_15.setLayout(new BorderLayout(0, 0));
 		
 		JButton btnExit = new JButton("EXIT");
+		btnExit.setForeground(new Color(197, 31, 24));
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				frame = new JFrame("Exit");
-				if (JOptionPane.showConfirmDialog(frame, "Confirm Exit", "Tic Tac Toe", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION) {
+				frmTicTacToe = new JFrame("Exit");
+				if (JOptionPane.showConfirmDialog(frmTicTacToe, "Confirm Exit", "Tic Tac Toe", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION) {
 					System.exit(0);
 				}
 			}
